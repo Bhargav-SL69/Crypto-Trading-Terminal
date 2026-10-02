@@ -45,6 +45,21 @@ Then open http://localhost:5173.
 | `npm run lint` | Run Oxlint |
 | `npm test` | Run the Vitest suite |
 
+## Deployment
+
+The app is deployed on Vercel: **https://crypto-trading-terminal-eight.vercel.app**
+
+The Vercel project is connected to this GitHub repository, so every push to `main` builds and deploys to production automatically. Vercel detects Vite on its own (build command `npm run build`, output directory `dist`), so no extra configuration is needed.
+
+To deploy manually from the command line:
+
+```bash
+npx vercel login      # once
+npx vercel --prod
+```
+
+The local `.vercel` folder holds the project link and is git-ignored.
+
 ## Project structure
 
 ```
